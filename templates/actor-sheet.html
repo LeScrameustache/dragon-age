@@ -8,27 +8,41 @@
                 <input name="name" type="text" value="{{data.name}}" placeholder="Name" />
             </h1>
             <div class="resource">
-                <input type="number" name="system.health.value" value="{{systemData.health.value}}"/>
+                <input type="number" name="system.sante.value" value="{{systemData.sante.value}}"/>
                 <span> / </span>
-                <input type="number" name="system.health.max" value="{{systemData.health.max}}"/>
+                <input type="number" name="system.sante.max" value="{{systemData.sante.max}}"/>
             </div>
             <div class="resource">
-                <input type="number" name="system.power.value" value="{{systemData.power.value}}"/>
+                <input type="number" name="system.fatigue.value" value="{{systemData.fatigue.value}}"/>
                 <span> / </span>
-                <input type="number" name="system.power.max" value="{{systemData.power.max}}"/>
+                <input type="number" name="system.fatigue.max" value="{{systemData.fatigue.max}}"/>
             </div>
         </div>
     </header>
 
     {{!-- Sheet Tab Navigation --}}
     <nav class="sheet-tabs tabs" data-group="primary">
+        <a class="item" data-tab="attributes">Caractéristiques</a>
         <a class="item" data-tab="description">Description</a>
         <a class="item" data-tab="items">Items</a>
-        <a class="item" data-tab="attributes">Attributes</a>
     </nav>
 
     {{!-- Sheet Body --}}
     <section class="sheet-body">
+        {{!-- Caractéristiques Tab --}}
+        <div class="tab attributes" data-group="primary" data-tab="attributes">
+            <ol class="attributes-list">
+                {{#each actor.data.attributes as |attrib key|}}
+                    <li class="attribute flexrow" data-attribute="{{key}}">
+                        <span>un truc</span>
+                        <span class="attribute-label flexrow" name="data.attributes.{{key}}.label">{{attrib.label}}</span>
+                        <div class="attribute-editbox flexrow">
+                            <input class="attribute-value" type="text" name="data.attributes.{{key}}.niveau" value="{{attrib.niveau}}" data-dtype="Number"/>
+                        </div>
+                    </li>
+                 {{/each}}
+            </ol>
+        </div>
 
         {{!-- Biography Tab --}}
         <div class="tab description" data-group="primary" data-tab="description">
@@ -86,30 +100,6 @@
             <p>
                 <a class="item-control" title="{{ localize "SIMPLE.ItemCreate" }}" data-action="create"><i class="fas fa-plus"></i> {{ localize "SIMPLE.ItemCreate" }}</a>
             </p>
-        </div>
-
-        {{!-- Attributes Tab --}}
-        <div class="tab attributes" data-group="primary" data-tab="attributes">
-            <header class="attributes-header flexrow">
-                <span class="attribute-key">{{localize "SIMPLE.AttributeKey"}}</span>
-                <span class="attribute-value">{{localize "SIMPLE.AttributeValue"}}</span>
-                <span class="attribute-label">{{localize "SIMPLE.AttributeLabel"}}</span>
-                <span class="attribute-dtype">{{localize "SIMPLE.AttributeDtype"}}</span>
-                <a class="attribute-control" data-action="create" data-group="{{group}}"><i class="fas fa-plus"></i></a>
-            </header>
-
-            {{!-- Render the attribute list partial. --}}
-            {{> "systems/worldbuilding/templates/parts/sheet-attributes.html" attributes=systemData.ungroupedAttributes dtypes=dtypes}}
-
-            {{!-- Render the grouped attributes partial and control. --}}
-            <div class="groups">
-                {{> "systems/worldbuilding/templates/parts/sheet-groups.html" attributes=systemData.groupedAttributes groups=systemData.groups dtypes=dtypes}}
-
-                <div class="group-controls flexrow">
-                    <input class="group-prefix" type="text" value=""/>
-                    <a class="button group-control" data-action="create-group"><i class="fas fa-plus"></i>Add Attribute Group</a>
-                </div>
-            </div>
         </div>
     </section>
 </form>

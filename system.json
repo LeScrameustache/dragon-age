@@ -1,13 +1,13 @@
 {
-  "id": "worldbuilding",
-  "version": "0.8.2",
-  "title": "Simple World-Building",
-  "url": "https://github.com/foundryvtt/worldbuilding/",
+  "id": "worldbuildingUpdated",
+  "version": "0.1.0",
+  "title": "Simple World-Building Updated",
+  "url": "",
   "description": "A minimalist game system which provides configurable Actor and Item templates to support free-form system agnostic game-play.",
   "license": "LICENSE.txt",
   "authors": [
     {
-      "name": "Atropos",
+      "name": "LeScrameustache",
       "url": "https://foundryvtt.com"
     }
   ],
@@ -30,10 +30,10 @@
     "minimum": "10",
     "verified": "11"
   },
-  "gridDistance": 5,
-  "gridUnits": "ft",
-  "primaryTokenAttribute": "health",
-  "secondaryTokenAttribute": "power",
+  "gridDistance": 3,
+  "gridUnits": "m",
+  "primaryTokenAttribute": "Santé",
+  "secondaryTokenAttribute": "Fatigue",
   "manifest": "https://raw.githubusercontent.com/foundryvtt/worldbuilding/master/system.json",
   "download": "https://github.com/foundryvtt/worldbuilding/archive/refs/tags/release-082.zip"
 }
