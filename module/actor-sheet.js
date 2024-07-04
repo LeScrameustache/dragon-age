@@ -12,7 +12,7 @@ export class SimpleActorSheet extends ActorSheet {
     return foundry.utils.mergeObject(super.defaultOptions, {
       classes: ["worldbuilding", "sheet", "actor"],
       template: "systems/worldbuildingUpdated/templates/actor-sheet.html",
-      width: 600,
+      width: 900,
       height: 600,
       tabs: [{navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "attributes"}],
       scrollY: [".attributes",".biography", ".items"],

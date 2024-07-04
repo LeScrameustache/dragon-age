@@ -29,19 +29,28 @@
 
     {{!-- Sheet Body --}}
     <section class="sheet-body">
-        {{!-- Caractéristiques Tab --}}
         <div class="tab attributes" data-group="primary" data-tab="attributes">
-            <ol class="attributes-list">
-                {{#each actor.data.attributes as |attrib key|}}
-                    <li class="attribute flexrow" data-attribute="{{key}}">
-                        <span>un truc</span>
-                        <span class="attribute-label flexrow" name="data.attributes.{{key}}.label">{{attrib.label}}</span>
-                        <div class="attribute-editbox flexrow">
-                            <input class="attribute-value" type="text" name="data.attributes.{{key}}.niveau" value="{{attrib.niveau}}" data-dtype="Number"/>
-                        </div>
-                    </li>
-                 {{/each}}
-            </ol>
+            <div class="attributes-grid">
+                {{#each actor.system.attributes as |attrib key|}}
+                <div class="attribute-column">
+                    <div class="attribute-header">
+                        <span class="attribute-label">{{attrib.label}}</span>
+                    </div>
+                    <input class="attribute-value" type="text" name="actor.system.attributes.{{key}}.niveau" value="{{attrib.niveau}}" data-dtype="Number"/>
+                    <script>
+                        console.log({{attrib}});
+                    </script>
+                    <ol class="domaine-list">
+                        {{#each attrib.domaines as |dom key|}}
+                        <li class="domaine-item">
+                            <span class="domaine-label">{{dom.label}}</span>
+                            <input class="domaine-value" type="text" name="actor.system.attributes.{{key}}.niveau" value="{{dom.niveau}}" data-dtype="Number"/>
+                        </li>
+                        {{/each}}
+                    </ol>
+                </div>
+                {{/each}}
+            </div>
         </div>
 
         {{!-- Biography Tab --}}

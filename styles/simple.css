@@ -166,6 +166,8 @@
   list-style: none;
   margin: 0;
   padding: 0;
+  display: flex;
+  direction: row;
 }
 .worldbuilding .attributes-list li > * {
   margin: 0 3px;
@@ -191,7 +193,7 @@
 .worldbuilding .group-header input[type="text"]::placeholder {
   opacity: 0;
   transition: opacity 0.25s ease-in-out;
-}
+}s
 .worldbuilding .attribute input[type="text"]:focus::placeholder,
 .worldbuilding .group-header input[type="text"]:focus::placeholder {
   opacity: 1;
@@ -242,4 +244,55 @@
 .worldbuilding.sheet.item {
   min-width: 460px;
   min-height: 400px;
+}
+
+.attributes-grid {
+  display: flex;
+  justify-content: space-between; /* Ajuste les éléments uniformément dans l'espace disponible */
+}
+
+.attribute-column {
+  flex: 0 0 18%; /* Chaque colonne prendra 18% de l'espace disponible, ajustez selon le besoin et l'espace disponible */
+  margin: 10px;
+  padding: 10px;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.attribute-header {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.domaine-list {
+  list-style-type: none; /* Supprime les puces */
+  padding: 0;
+}
+
+.domaine-item {
+  margin-top: 5px;
+}
+
+.attribute-header, .domaine-item {
+  display: flex;
+  align-items: center; /* Centre les éléments verticalement */
+  justify-content: space-between; /* Répartit l'espace entre le label et l'input */
+}
+
+.attribute-label, .domaine-label {
+  margin-right: 10px; /* Ajoute un peu d'espace entre le label et l'input */
+}
+
+/* Uniformiser la taille des inputs */
+input[type="text"] {
+  flex-grow: 1; /* Permet à l'input de prendre tout l'espace disponible */
+  width: auto; /* S'assure que l'input peut grandir pour remplir l'espace */
+  margin-left: 10px; /* Espacement entre le label et l'input */
+}
+
+/* Correction pour s'assurer que tous les inputs ont la même taille */
+.attribute-value, .domaine-value {
+  width: 100%; /* Assure que les inputs prennent toute la largeur de leur conteneur flex */
+  box-sizing: border-box; /* S'assure que padding et border sont inclus dans la largeur */
 }
