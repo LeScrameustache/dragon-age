@@ -4,17 +4,168 @@
   "htmlFields": ["biography"],
   "character": {
     "biography": "",
-    "health": {
+    "sante": {
       "value": 10,
       "min": 0,
       "max": 10
     },
-    "power": {
+    "fatigue": {
       "value": 5,
       "min": 0,
       "max": 5
     },
-    "attributes": {},
+    "attributes": {
+      "Puissant": {
+        "label": "Puissant",
+        "niveau": 0,
+        "domaines": {
+          "CaC": {
+            "label": "Corps-à-corps",
+            "niveau": 0,
+            "valeur": 0,
+            "disciplines": []
+          },
+          "Magie_Destruction": {
+            "label": "Magie de Destruction",
+            "niveau": 0,
+            "valeur": 0,
+            "disciplines": []
+          },
+          "Intimidation": {
+            "label": "Intimidation",
+            "niveau": 0,
+            "valeur": 0,
+            "disciplines": []
+          },
+          "Stress": {
+            "label": "Stress",
+            "niveau": 0,
+            "valeur": 0,
+            "disciplines": []
+          }
+        }
+      },
+      "Flamboyant": {
+        "label": "Flamboyant",
+        "niveau": 0,
+        "domaines": {
+          "Persuasion": {
+            "label": "Persuasion",
+            "niveau": 0,
+            "valeur": 0,
+            "disciplines": []
+          },
+          "Magie_Altération": {
+            "label": "Magie d'Altération",
+            "niveau": 0,
+            "valeur": 0,
+            "disciplines": []
+          },
+          "Chance": {
+            "label": "Chance",
+            "niveau": 0,
+            "valeur": 0,
+            "disciplines": []
+          },
+          "Art_Artisanat": {
+            "label": "Art et Artisanat",
+            "niveau": 0,
+            "valeur": 0,
+            "disciplines": []
+          }
+        }
+      },
+      "Astucieux": {
+        "label": "Astucieux",
+        "niveau": 0,
+        "domaines": {
+          "Erudition": {
+            "label": "Érudition",
+            "niveau": 0,
+            "valeur": 0,
+            "disciplines": []
+          },
+          "Sciences": {
+            "label": "Sciences",
+            "niveau": 0,
+            "valeur": 0,
+            "disciplines": []
+          },
+          "Nature": {
+            "label": "Milieu Naturel",
+            "niveau": 0,
+            "valeur": 0,
+            "disciplines": []
+          },
+          "Artefact": {
+            "label": "Artefact",
+            "niveau": 0,
+            "valeur": 0,
+            "disciplines": []
+          }
+        }
+      },
+      "Technique": {
+        "label": "Technique",
+        "niveau": 0,
+        "domaines": {
+          "Viser_Lancer": {
+            "label": "Tir et Lancer",
+            "niveau": 0,
+            "valeur": 0,
+            "disciplines": []
+          },
+          "Prouesses": {
+            "label": "Prouesses",
+            "niveau": 0,
+            "valeur": 0,
+            "disciplines": []
+          },
+          "Magie_Restauration": {
+            "label": "Magie de Restauration",
+            "niveau": 0,
+            "valeur": 0,
+            "disciplines": []
+          },
+          "Perception": {
+            "label": "Perception",
+            "niveau": 0,
+            "valeur": 0,
+            "disciplines": []
+          }
+        }
+      },
+      "Sournois": {
+        "label": "Sournois",
+        "niveau": 0,
+        "domaines": {
+          "Mensonges": {
+            "label": "Mensonges",
+            "niveau": 0,
+            "valeur": 0,
+            "disciplines": []
+          },
+          "Magie_Sang": {
+            "label": "Magie du Sang",
+            "niveau": 0,
+            "valeur": 0,
+            "disciplines": []
+          },
+          "Vol_Filouterie": {
+            "label": "Vol et filouterie",
+            "niveau": 0,
+            "valeur": 0,
+            "disciplines": []
+          },
+          "Discrétion": {
+            "label": "Discrétion",
+            "niveau": 0,
+            "valeur": 0,
+            "disciplines": []
+            }
+        }
+      }
+    },
     "groups": {}
   }
 },

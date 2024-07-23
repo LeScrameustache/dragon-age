@@ -1,16 +1,14 @@
-.worldbuilding {
-  /* Sheet Tabs */
-  /* Items List */
-  /* Attributes */
-}
+
 .worldbuilding .window-content {
   height: 100%;
   padding: 5px;
   overflow-y: hidden;
 }
+
 .worldbuilding form {
   height: 100%;
 }
+
 .worldbuilding .sheet-header {
   flex: 0 0 100px;
   overflow: hidden;
@@ -20,26 +18,31 @@
   justify-content: flex-start;
   margin-bottom: 10px;
 }
+
 .worldbuilding .sheet-header .profile-img {
   flex: 0 0 100px;
   height: 100px;
   margin-right: 10px;
 }
+
 .worldbuilding .sheet-header .header-fields {
   flex: 1;
   height: 100px;
 }
+
 .worldbuilding .sheet-header h1.charname {
   height: 50px;
   padding: 0px;
   margin: 5px 0;
   border-bottom: 0;
 }
+
 .worldbuilding .sheet-header h1.charname input {
   width: 100%;
   height: 100%;
   margin: 0;
 }
+
 .worldbuilding .resource {
   width: 50%;
   height: 40px;
@@ -47,40 +50,49 @@
   float: left;
   text-align: center;
 }
+
 .worldbuilding .resource input {
   width: 100px;
   height: 28px;
 }
+
 .worldbuilding .tabs {
   flex: 0 0 40px;
   border-top: 1px solid #AAA;
   border-bottom: 1px solid #AAA;
 }
+
 .worldbuilding .tabs .item {
   line-height: 40px;
   font-weight: bold;
 }
+
 .worldbuilding .tabs .item.active {
   text-decoration: underline;
   text-shadow: none;
 }
+
 .worldbuilding .sheet-body {
   overflow: hidden;
 }
+
 .worldbuilding .sheet-body .tab {
   height: 100%;
   overflow-y: auto;
 }
+
 .worldbuilding .editor,
 .worldbuilding .editor-content {
   height: 100%;
 }
+
 .worldbuilding .item-list {
   list-style: none;
   margin: 7px 0;
   padding: 0;
   overflow-y: auto;
 }
+
 .worldbuilding .item-list .item {
   min-height: 30px;
   line-height: 24px;
@@ -88,16 +100,20 @@
   border-bottom: 1px solid #BBB;
   align-items: stretch;
 }
+
 .worldbuilding .item-list .item img {
   flex: 0 0 24px;
   margin-right: 5px;
 }
+
 .worldbuilding .item-list .item-name {
   margin: 0;
 }
+
 .worldbuilding .item-list .item-controls {
   flex: 0 0 36px;
 }
+
 .worldbuilding .item-list .item-buttons {
   display: flex;
   flex-wrap: wrap;
@@ -106,15 +122,18 @@
   flex: 2;
   justify-content: flex-start;
 }
+
 .worldbuilding .item-list .item-button {
   line-height: 1;
   font-size: 11px;
   flex: none;
   width: auto;
 }
+
 .worldbuilding .attributes {
   position: relative;
 }
+
 .worldbuilding .attributes .attribute-control,
 .worldbuilding .attributes .group-control {
   flex: 0 0 20px;
@@ -122,6 +141,7 @@
   line-height: 28px;
   border: none;
 }
+
 .worldbuilding .attributes .attribute-roll {
   flex: 0 0 20px;
   text-align: center;
@@ -130,10 +150,12 @@
   align-items: center;
   justify-content: center;
 }
+
 .worldbuilding .attributes .group-prefix {
   height: 31px;
   margin-right: 10px;
 }
+
 .worldbuilding .attributes .button {
   width: 100%;
   flex: 1;
@@ -145,10 +167,12 @@
   line-height: 28px;
   display: block;
 }
+
 .worldbuilding .attributes .attribute-key {
   background: transparent;
   border: none;
 }
+
 .worldbuilding .attributes-header {
   position: sticky;
   top: 0;
@@ -162,11 +186,15 @@
   text-align: left;
   font-weight: bold;
 }
+
 .worldbuilding .attributes-list {
   list-style: none;
   margin: 0;
   padding: 0;
+  display: flex;
+  direction: row;
 }
+
 .worldbuilding .attributes-list li > * {
   margin: 0 3px;
   height: 28px;
@@ -176,38 +204,46 @@
   border-radius: 0;
   border-bottom: 1px solid #AAA;
 }
+
 .worldbuilding .attributes-list .attribute-col label {
   font-size: 10px;
   text-align: center;
   line-height: 1;
 }
+
 .worldbuilding .attributes-list .attribute-col input {
   font-size: 11px;
   text-align: center;
   line-height: 1;
   height: 50%;
 }
+
 .worldbuilding .attribute input[type="text"]::placeholder,
 .worldbuilding .group-header input[type="text"]::placeholder {
   opacity: 0;
   transition: opacity 0.25s ease-in-out;
 }
+
 .worldbuilding .attribute input[type="text"]:focus::placeholder,
 .worldbuilding .group-header input[type="text"]:focus::placeholder {
   opacity: 1;
 }
+
 .worldbuilding .group-controls {
   margin: 5px;
 }
+
 .worldbuilding .groups-list {
   list-style: none;
   margin: 0;
   padding: 0;
 }
+
 .worldbuilding .group {
   margin: 5px 0 0;
   padding: 0;
 }
+
 .worldbuilding .group-header {
   align-items: center;
   background: rgba(0, 0, 0, 0.05);
@@ -215,6 +251,7 @@
   border-radius: 2px;
   padding: 2px 5px;
 }
+
 .worldbuilding .group-key,
 .worldbuilding .group-label {
   font-weight: bold;
@@ -224,22 +261,145 @@
   border-radius: 0;
   margin-right: 6px;
 }
+
 .worldbuilding .group-key {
   opacity: 0.75;
 }
+
 .worldbuilding .group-label {
   flex: 2;
 }
+
 .worldbuilding .group-dtype {
   height: 24px;
   flex: 0 0 116px;
   margin: 0 5px;
 }
+
 .worldbuilding.sheet.actor {
   min-width: 560px;
   min-height: 420px;
 }
+
 .worldbuilding.sheet.item {
   min-width: 460px;
   min-height: 400px;
+}
+
+.attributes-grid {
+  display: flex;
+  justify-content: space-between;
+}
+
+.attribute-column {
+  flex: 0 0 18%;
+  margin: 10px;
+  padding: 10px;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.attribute-header {
+  margin-bottom: 20px;
+  font-weight: bold;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 10px;
+}
+
+.domaine-list {
+  list-style-type: none;
+  padding: 0;
+  order: 3;
+  width: 100%;
+}
+
+.domaine-item, .attribute-header, .domaine-list {
+  line-height: 1.2; /* Ajustez cette valeur selon vos besoins */
+}
+
+
+.attribute-column,
+.domaine-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.attribute-header {
+  order: 1;
+}
+
+.domaine-item {
+  margin-top: 5px;
+  width: 100%;
+  display: flex; /* Rend le conteneur flex */
+  align-items: center; /* Centre les éléments verticalement */
+  justify-content: space-between; /* Pousse les éléments aux extrémités */
+  gap: 10px; /* Espacement entre les éléments */
+  flex-direction: row; /* Aligne les éléments horizontalement */
+}
+
+.attribute-header,
+.domaine-item {
+  gap: 10px; /* Ajoute un peu d'espace entre les éléments */
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.attribute-label,
+.domaine-label {
+  margin-right: 10px;
+  white-space: normal;
+}
+
+input[type="number"] {
+  flex-grow: 1;
+  width: 50px;
+  margin-left: 10px;
+}
+
+.attribute-value,
+.domaine-value {
+  flex: 0 1 auto;
+  margin-right: 10px;
+  width: 50px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.domaine-dice-roll-button, .domaine-dice-roll-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  flex: 0 1 auto;
+  margin-left: auto;
+  height: 30px; /* Exemple de hauteur, ajustez selon vos besoins */
+  width: 30px; /* Rend les boutons carrés */
+  padding: 0; /* Ajustez ou supprimez le padding pour s'assurer que le bouton reste carré */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.domaine-dice-roll-button .fas,
+.domaine-dice-roll-button .fas {
+  margin-left: auto;
+  color: #333;
+  width: 50px; /* Réduit la largeur du bouton */
+  height: 30px; /* Réduit la hauteur du bouton */
+  padding: 5px; /* Ajustez selon le besoin pour le contenu interne */
+}
+
+.attribute-column .attribute-value,
+.attribute-column .attribute-dice-roll-button,
+.domaine-item .domaine-value,
+.domaine-item .domaine-dice-roll-button {
+  height: auto;
+  padding: 5px;
 }
