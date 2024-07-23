@@ -29,22 +29,26 @@
 
     {{!-- Sheet Body --}}
     <section class="sheet-body">
+        {{!-- Attributes Tab --}}
         <div class="tab attributes" data-group="primary" data-tab="attributes">
             <div class="attributes-grid">
                 {{#each actor.system.attributes as |attrib key|}}
                 <div class="attribute-column">
                     <div class="attribute-header">
                         <span class="attribute-label">{{attrib.label}}</span>
+                        <input class="attribute-value" type="number" name="actor.system.attributes.{{key}}.niveau" value="{{attrib.niveau}}" data-dtype="Number" min="0" max="5"/>
+                        <button class="attribute-dice-roll-button">
+                            <i class="fas fa-dice-d10"></i>
+                        </button>
                     </div>
-                    <input class="attribute-value" type="text" name="actor.system.attributes.{{key}}.niveau" value="{{attrib.niveau}}" data-dtype="Number"/>
-                    <script>
-                        console.log({{attrib}});
-                    </script>
                     <ol class="domaine-list">
                         {{#each attrib.domaines as |dom key|}}
                         <li class="domaine-item">
                             <span class="domaine-label">{{dom.label}}</span>
-                            <input class="domaine-value" type="text" name="actor.system.attributes.{{key}}.niveau" value="{{dom.niveau}}" data-dtype="Number"/>
+                            <input class="domaine-value" type="number" name="actor.system.attributes.domaines.{{key}}.niveau" value="{{dom.niveau}}" data-dtype="Number" min="0" max="5"/>
+                            <button class="domaine-dice-roll-button">
+                                <i class="fas fa-dice-d10"></i>
+                            </button>
                         </li>
                         {{/each}}
                     </ol>
